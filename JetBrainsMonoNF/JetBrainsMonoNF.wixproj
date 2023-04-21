@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>aac181ed-e019-41e6-a205-d1c183600171</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>JetBrainsMonoNF</OutputName>
+    <OutputType>Package</OutputType>
+    <DefineSolutionProperties>false</DefineSolutionProperties>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug;FontsDirectory=fonts</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>FontsDirectory=Fonts</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Directory.wxs" />
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\JetBrains Mono Bold Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Bold Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Bold Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Bold Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraBold Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraBold Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraBold Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraBold Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraLight Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraLight Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraLight Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono ExtraLight Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Light Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Light Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Light Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Light Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Medium Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Medium Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Medium Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Medium Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Bold Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Bold Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Bold Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Bold Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraBold Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraBold Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraBold Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraBold Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraLight Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraLight Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraLight Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL ExtraLight Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Light Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Light Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Light Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Light Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Medium Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Medium Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Medium Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Medium Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Regular Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Regular Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL SemiBold Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL SemiBold Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL SemiBold Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL SemiBold Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Thin Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Thin Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Thin Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono NL Thin Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Regular Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Regular Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono SemiBold Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono SemiBold Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono SemiBold Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono SemiBold Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Thin Italic Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Thin Italic Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Thin Nerd Font Complete Mono Windows Compatible.ttf" />
+    <Content Include="Fonts\JetBrains Mono Thin Nerd Font Complete Windows Compatible.ttf" />
+    <Content Include="Product.xml" />
+    <Content Include="TrueType.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
+  <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
+    <Error Text="The WiX Toolset v3.11 build tools must be installed to build this project. To download the WiX Toolset, see https://wixtoolset.org/releases/v3.11/stable" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>heat dir $(ProjectDir)\fonts -ag -cg ProductComponents -sfrag -srd -sreg -scom -var var.FontsDirectory -dr FontsFolder -t $(ProjectDir)TrueType.xsl -out $(ProjectDir)Directory.wxs</PreBuildEvent>
+  </PropertyGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
