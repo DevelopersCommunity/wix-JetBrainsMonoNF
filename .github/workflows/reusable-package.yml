@@ -9,6 +9,8 @@ jobs:
       - name: Build package
         shell: pwsh
         run: ./Build-Installer.ps1
+        env:
+          GH_TOKEN: ${{ github.token }}
       - uses: actions/upload-artifact@v3
         with:
           name: build
