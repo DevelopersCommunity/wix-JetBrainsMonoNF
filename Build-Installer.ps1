@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 $asset = gh release view `
     -R ryanoasis/nerd-fonts `
     --json assets `
-    -q '.assets[].url|match(".*JetBrainsMono.*"; "g")|.string'
+    -q '.assets[].url|match("^.*JetBrainsMono.*$"; "g")|.string'
 
 Invoke-WebRequest -Uri $asset -OutFile $PSScriptRoot\JetBrainsMono.zip
 Remove-Item `
