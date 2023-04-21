@@ -1,0 +1,8 @@
+name: Package
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  package:
+    uses: ./.github/workflows/reusable-package.yml
