@@ -101,7 +101,7 @@
     <Error Text="The WiX Toolset v3.11 build tools must be installed to build this project. To download the WiX Toolset, see https://wixtoolset.org/releases/v3.11/stable" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>heat dir $(ProjectDir)\fonts -ag -cg ProductComponents -sfrag -srd -sreg -scom -var var.FontsDirectory -dr FontsFolder -t $(ProjectDir)TrueType.xsl -out $(ProjectDir)Directory.wxs</PreBuildEvent>
+    <PreBuildEvent>"%WIX%bin\heat" dir $(ProjectDir)\fonts -ag -cg ProductComponents -sfrag -srd -sreg -scom -var var.FontsDirectory -dr FontsFolder -t $(ProjectDir)TrueType.xsl -out $(ProjectDir)Directory.wxs</PreBuildEvent>
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
