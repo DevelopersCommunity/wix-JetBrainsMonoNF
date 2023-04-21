@@ -7,7 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build package
-        shell: pwsh
         run: |
           $asset = gh release view `
               -R ryanoasis/nerd-fonts `
