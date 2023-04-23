@@ -396,8 +396,3 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-
-JetBrainsMonoNF/Fonts/
-*.zip
-Directory.wxs
-Product.wxs
