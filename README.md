@@ -22,7 +22,21 @@ Start-Process `
 
 ## Build
 
-Run the `Build-Installer.ps1` PowerShell script to build the installer.
+Run the `JetBrainsMono\Build-Installer.ps1` PowerShell script to build the
+installer.
 
-If successful, the MSI file will be available in the
-`JetBrainsMonoNF\bin\Release` directory.
+If successful, the MSI file will be available in the `JetBrainsMono\bin\Release`
+directory.
+
+## Visual Studio project template
+
+You can use the included [Visual Studio project
+template](https://learn.microsoft.com/visualstudio/ide/creating-project-and-item-templates)
+to build an installer for a Nerd Font of your choice. To use the template, zip
+the files in the `VSTemplate` folder and copy it to your `%USERPROFILE%\Documents\Visual Studio 2022\Templates\ProjectTemplates`
+folder.
+
+After installing the template, create a new Visual Studio project using it, and
+name the project with the name of one of the zip files available for download in
+the [releases page](https://github.com/ryanoasis/nerd-fonts/releases) of the
+Nerd Font GitHub repository.
