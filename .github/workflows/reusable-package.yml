@@ -10,11 +10,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build package
         shell: pwsh
-        run: ./Build-Installer.ps1
+        run: ./JetBrainsMono/Build-Installer.ps1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v3
         with:
           name: build
-          path: JetBrainsMonoNF/bin/Release/*.msi
+          path: JetBrainsMono/bin/Release/*.msi
           if-no-files-found: error

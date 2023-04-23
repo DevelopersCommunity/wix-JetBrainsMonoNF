@@ -6,27 +6,27 @@ $asset = $Matches.url
 
 Invoke-WebRequest -Uri $asset -OutFile $PSScriptRoot\JetBrainsMono.zip
 Remove-Item `
-    -Path $PSScriptRoot\JetBrainsMonoNF\Fonts `
+    -Path $PSScriptRoot\Fonts `
     -Recurse `
     -Force `
     -ErrorAction SilentlyContinue
 New-Item `
-    -Path $PSScriptRoot\JetBrainsMonoNF\Fonts `
+    -Path $PSScriptRoot\Fonts `
     -ItemType Directory
 Expand-Archive `
     -Path $PSScriptRoot\JetBrainsMono.zip `
-    -DestinationPath $PSScriptRoot\JetBrainsMonoNF\Fonts `
+    -DestinationPath $PSScriptRoot\Fonts `
     -Force
 Remove-Item `
-    -Path $PSScriptRoot\JetBrainsMonoNF\Fonts\* `
+    -Path $PSScriptRoot\Fonts\* `
     -Exclude *Windows*
 
 $asset -match '/v(?<version>[\d.]+)/'
 $version = $Matches.version
 
-(Get-Content -Path $PSScriptRoot\JetBrainsMonoNF\Product.xml) `
+(Get-Content -Path $PSScriptRoot\Product.xml) `
     -creplace '(\bVersion=)"[\d.]+"', ('$1"' + $version + '"') `
-    > $PSScriptRoot\JetBrainsMonoNF\Product.wxs
+    > $PSScriptRoot\Product.wxs
 
 msbuild /p:Configuration=Release `
-    $PSScriptRoot\JetBrainsMonoNF\JetBrainsMonoNF.wixproj
+    $PSScriptRoot\JetBrainsMono.wixproj
