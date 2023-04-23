@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "JetBrainsMonoNF", "JetBrainsMonoNF\JetBrainsMonoNF.wixproj", "{AAC181ED-E019-41E6-A205-D1C183600171}"
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "JetBrainsMono", "JetBrainsMono\JetBrainsMono.wixproj", "{AAC181ED-E019-41E6-A205-D1C183600171}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
