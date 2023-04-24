@@ -3,6 +3,14 @@
 This is a [WiX v3](https://wixtoolset.org/docs/v3/) based installer for the
 [JetBrainsMono Nerd Font](https://www.nerdfonts.com/).
 
+This installer is available on
+[winget](https://learn.microsoft.com/windows/package-manager/winget/):
+
+```
+winget install --id DEVCOM.JetBrainsMonoNerdFont
+
+```
+
 ## Build prerequisites
 
 - [Visual Studio 2022 (any edition)](https://visualstudio.microsoft.com/#vs-section)
@@ -33,8 +41,8 @@ directory.
 You can use the included [Visual Studio project
 template](https://learn.microsoft.com/visualstudio/ide/creating-project-and-item-templates)
 to build an installer for a Nerd Font of your choice. To use the template, zip
-the files in the `VSTemplate` folder and copy it to your `%USERPROFILE%\Documents\Visual Studio 2022\Templates\ProjectTemplates`
-folder.
+the files in the `VSTemplate` folder and copy it to your
+`%USERPROFILE%\Documents\Visual Studio 2022\Templates\ProjectTemplates` folder.
 
 After installing the template, create a new Visual Studio project using it, and
 name the project with the name of one of the zip files available for download in
