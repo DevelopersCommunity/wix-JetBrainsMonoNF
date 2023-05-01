@@ -8,7 +8,6 @@ This installer is available on
 
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
-
 ```
 
 ## Build prerequisites
