@@ -19,7 +19,7 @@ Expand-Archive `
     -Force
 Remove-Item `
     -Path $PSScriptRoot\Fonts\* `
-    -Exclude *Windows*
+    -Exclude *.ttf
 
 $asset -match '/v(?<version>[\d.]+)/'
 $version = $Matches.version
