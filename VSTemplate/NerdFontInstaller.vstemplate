@@ -1,0 +1,23 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Nerd Font Installer</Name>
+    <Description>Nerd Font WiX installer</Description>
+    <ProjectType>WiX</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NerdFont</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="NerdFont.wixproj" File="NerdFont.wixproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Build-Installer.ps1">Build-Installer.ps1</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Product.xml">Product.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="TrueType.xsl">TrueType.xsl</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
