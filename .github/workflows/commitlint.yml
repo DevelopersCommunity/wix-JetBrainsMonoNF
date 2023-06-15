@@ -17,8 +17,11 @@ jobs:
           node --version
           npm --version
           npx commitlint --version
+      - name: Get commit count
+        id: commit_count
+        run: echo "commit_count=$(git rev-list HEAD --count)" >>$GITHUB_OUTPUT
       - name: Validate current commit (last commit) with commitlint
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && steps.commit_count.outputs.commit_count > 1
         run: npx commitlint --from HEAD~1 --to HEAD --verbose
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
