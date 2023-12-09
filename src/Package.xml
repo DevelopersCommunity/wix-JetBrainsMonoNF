@@ -1,0 +1,11 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="JetBrainsMono Nerd Font" Manufacturer="DEVCOM" Version="1.0.0.0" UpgradeCode="c0958d9a-1772-4444-82fc-1149c850d6ae" Scope="perMachine">
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+    <Feature Id="Main">
+      <ComponentGroupRef Id="FontComponents" />
+    </Feature>
+
+    <MediaTemplate EmbedCab="yes" />
+  </Package>
+</Wix>

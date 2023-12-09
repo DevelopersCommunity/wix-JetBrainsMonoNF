@@ -24,9 +24,8 @@ Remove-Item `
 $asset -match '/v(?<version>[\d.]+)/'
 $version = $Matches.version
 
-(Get-Content -Path $PSScriptRoot\Product.xml) `
+(Get-Content -Path $PSScriptRoot\Package.xml) `
     -creplace '(\bVersion=)"[\d.]+"', ('$1"' + $version + '"') `
-    > $PSScriptRoot\Product.wxs
+    > $PSScriptRoot\Package.wxs
 
-msbuild /p:Configuration=Release `
-    $PSScriptRoot\JetBrainsMono.wixproj
+dotnet build -c Release $PSScriptRoot\JetBrainsMono.wixproj
