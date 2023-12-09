@@ -1,0 +1,22 @@
+<Project Sdk="WixToolset.Sdk/4.0.3">
+  <PropertyGroup>
+    <DefineConstants>FontsDirectory=Fonts</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <HarvestDirectory Include="Fonts">
+      <ComponentGroupName>FontComponents</ComponentGroupName>
+      <DirectoryRefId>FontsFolder</DirectoryRefId>
+      <SupressRegistry>true</SupressRegistry>
+      <SupressCom>true</SupressCom>
+      <SuppressRootDirectory>true</SuppressRootDirectory>
+      <PreprocessorVariable>var.FontsDirectory</PreprocessorVariable>
+      <Transforms>TrueType.xsl</Transforms>
+    </HarvestDirectory>
+
+    <BindPath Include="Fonts" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Heat" Version="4.0.3" />
+  </ItemGroup>
+</Project>

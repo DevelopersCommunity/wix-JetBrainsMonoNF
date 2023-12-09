@@ -5,16 +5,17 @@ jobs:
   package:
     runs-on: windows-latest
     steps:
-      - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v1.1
+      - name: Install WiX v4
+        shell: pwsh
+        run: dotnet tool install --global wix
       - uses: actions/checkout@v3
       - name: Build package
         shell: pwsh
-        run: ./JetBrainsMono/Build-Installer.ps1
+        run: ./src/Build-Installer.ps1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v3
         with:
           name: build
-          path: JetBrainsMono/bin/Release/*.msi
+          path: src/bin/Release/en-US/*.msi
           if-no-files-found: error
