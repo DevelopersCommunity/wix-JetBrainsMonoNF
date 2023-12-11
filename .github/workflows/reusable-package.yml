@@ -8,7 +8,10 @@ jobs:
       - name: Install WiX v4
         shell: pwsh
         run: dotnet tool install --global wix
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: Install Pandoc
+        shell: pwsh
+        run: choco install pandoc
       - name: Build package
         shell: pwsh
         run: ./src/Build-Installer.ps1

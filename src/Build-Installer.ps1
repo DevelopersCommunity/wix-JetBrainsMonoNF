@@ -28,4 +28,6 @@ $version = $Matches.version
     -creplace '(\bVersion=)"[\d.]+"', ('$1"' + $version + '"') `
     > $PSScriptRoot\Package.wxs
 
+pandoc -s -i $PSScriptRoot\..\License.txt -o $PSScriptRoot\License.rtf
+
 dotnet build -c Release $PSScriptRoot\JetBrainsMono.wixproj

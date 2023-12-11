@@ -14,12 +14,14 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 
 - [WiX v4](https://wixtoolset.org/docs/intro/)
 - [GitHub CLI](https://cli.github.com/)
+- [Pandoc](https://pandoc.org/)
 
 Install them with the following commands:
 
 ```powershell
 dotnet tool install --global wix
 winget install --id GitHub.cli
+winget install --id JohnMacFarlane.Pandoc
 ```
 
 ## Build
