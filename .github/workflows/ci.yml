@@ -1,0 +1,17 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  gitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install gitlint
+        run: pip install gitlint
+      - name: Validate current commit (last commit) with gitlint
+        if: github.event_name == 'push'
+        run: gitlint
+      - name: Validate PR commits with gitlint
+        if: github.event_name == 'pull_request'
+        run: gitlint --commits ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }},${{ github.event.pull_request.head.sha }}
