@@ -1,0 +1,20 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  gitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install gitlint
+        run: pip install gitlint
+      - name: Get commit count
+        id: commit_count
+        run: echo "commit_count=$(git rev-list HEAD --count)" >>$GITHUB_OUTPUT
+      - name: Validate current commit (last commit) with gitlint
+        if: github.event_name == 'push' && steps.commit_count.outputs.commit_count > 1
+        run: gitlint
+      - name: Validate PR commits with gitlint
+        if: github.event_name == 'pull_request'
+        run: gitlint --commits ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }},${{ github.event.pull_request.head.sha }}
