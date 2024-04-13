@@ -1,4 +1,4 @@
-<Project Sdk="WixToolset.Sdk/4.0.3">
+<Project Sdk="WixToolset.Sdk/5.0.0">
   <PropertyGroup>
     <DefineConstants>FontsDirectory=Fonts</DefineConstants>
   </PropertyGroup>
@@ -17,7 +17,7 @@
     <BindPath Include="Fonts" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WixToolset.Heat" Version="4.0.3" />
-    <PackageReference Include="WixToolset.UI.wixext" Version="4.0.3" />
+    <PackageReference Include="WixToolset.Heat" Version="5.0.0" />
+    <PackageReference Include="WixToolset.UI.wixext" Version="5.0.0" />
   </ItemGroup>
 </Project>
