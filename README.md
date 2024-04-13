@@ -1,6 +1,6 @@
 # JetBrainsMono Nerd Font installer for Windows
 
-This is a [WiX v4](https://wixtoolset.org/docs/intro/) based installer for the
+This is a [WiX v5](https://wixtoolset.org/docs/intro/) based installer for the
 [JetBrainsMono Nerd Font](https://www.nerdfonts.com/).
 
 This installer is available on
@@ -12,14 +12,12 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 
 ## Build prerequisites
 
-- [WiX v4](https://wixtoolset.org/docs/intro/)
 - [GitHub CLI](https://cli.github.com/)
 - [Pandoc](https://pandoc.org/)
 
 Install them with the following commands:
 
 ```powershell
-dotnet tool install --global wix
 winget install --id GitHub.cli
 winget install --id JohnMacFarlane.Pandoc
 ```

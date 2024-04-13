@@ -8,8 +8,8 @@ jobs:
     needs: package
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
       - run: |
           tag=$(gh release view -R ryanoasis/nerd-fonts --json tagName -q '.tagName')
           gh release create "${tag}" --notes "JetBrainsMono Nerd Font ${tag}" ./build/*.msi
