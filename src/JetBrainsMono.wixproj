@@ -7,7 +7,7 @@
     <HarvestDirectory Include="Fonts">
       <ComponentGroupName>FontComponents</ComponentGroupName>
       <DirectoryRefId>FontsFolder</DirectoryRefId>
-      <SupressRegistry>true</SupressRegistry>
+      <SuppressRegistry>true</SuppressRegistry>
       <SupressCom>true</SupressCom>
       <SuppressRootDirectory>true</SuppressRootDirectory>
       <PreprocessorVariable>var.FontsDirectory</PreprocessorVariable>
@@ -17,7 +17,7 @@
     <BindPath Include="Fonts" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WixToolset.Heat" Version="5.0.0" />
-    <PackageReference Include="WixToolset.UI.wixext" Version="5.0.0" />
+    <PackageReference Include="WixToolset.Heat" Version="5.0.2" />
+    <PackageReference Include="WixToolset.UI.wixext" Version="5.0.2" />
   </ItemGroup>
 </Project>
